@@ -104,8 +104,7 @@ class Animal():
             " years old," + " her diet is " + self.diet + " and have " + str(self.foot)  +\
             " feet\n " + "Her descendants are:  " + str(self.child_name) +\
             " and her mother is : " + str(self.mother_name)
-        else:
-            return self.name+ " is a/an " + self.species + " who is " +\
+        return self.name+ " is a/an " + self.species + " who is " +\
             str(self.age) + " years old, " + " her diet is " +\
             self.diet + " and have " + str(self.foot)  + " feet\n " +\
             "Her mother is " + str(self.mother_name)+ " and she doesn't have kids"
@@ -117,8 +116,6 @@ class Homme(Animal):
         # super() allows to access methos of the Animal class
         #incremating certain attributes
         super().__init__(name,"Homme", age, 2, "Ominovre")
-    def __str__(self) -> str:
-        return super().__str__()
 
 if __name__ == "__main__":
 
@@ -133,7 +130,7 @@ if __name__ == "__main__":
     print(animalC)
     print(AnimalD)
     animal.remove_children(animalA,"Upex")
-    
+
     animal1= Animal("toma","dog",9,4,"carnivore")
     animal2= animal1.add_children("Vincenta",1)
     animal3= animal1.add_children("Eliota",5)
