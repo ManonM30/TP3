@@ -59,7 +59,7 @@ class Animal():
             your_mother=self.mother
             while your_mother: #while child's grandmother exists
                 for kid in self.children:
-                    # if the kid and its name not in  grandmother's list of children, add it
+                    # if the child and its name not in  grandmother's list of children, add it
                     if str(kid.name) not in your_mother.child_name:
                         your_mother.child_name.append(kid.name)
                         your_mother.children.append(kid)
@@ -122,6 +122,18 @@ class Homme(Animal):
 
 if __name__ == "__main__":
 
+    animal=Animal("Pure","Autruche",10,2,"omnivore")
+    animalA=animal.add_children("Upex",1)
+    animalB=animal.add_children("Umex",1)
+    animalC=animal.add_children("Utex",1)
+    AnimalD=animalA.add_children("enfant_upex",1)
+    print(animal)
+    print(animalA)
+    print(animalB)
+    print(animalC)
+    print(AnimalD)
+    animal.remove_children(animalA,"Upex")
+    
     animal1= Animal("toma","dog",9,4,"carnivore")
     animal2= animal1.add_children("Vincenta",1)
     animal3= animal1.add_children("Eliota",5)
